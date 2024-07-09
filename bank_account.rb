@@ -1,4 +1,4 @@
-class Main
+class BankAccount
   attr_accessor :balance
 
   def initialize

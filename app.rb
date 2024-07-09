@@ -1,4 +1,4 @@
-require_relative 'main'
+require_relative 'bank_account'
 
-main_page = Main.new
+main_page = BankAccount.new
 main_page.run
