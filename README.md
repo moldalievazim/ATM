@@ -1,5 +1,7 @@
-# ruby-cli-template
+# ATM app CLI
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
+Ruby CLI (command line interface) project simulating a ATM with some functionalities (balance check, deposit, withdrawal).
 
-- Ruby version: `3.2.1`
+## Operation
+
+Run ```ruby app.rb``` in the terminal.
