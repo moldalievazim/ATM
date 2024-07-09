@@ -3,41 +3,28 @@ require_relative '../bank_account'
 
 class TestBankAccount < Minitest::Test
   def setup
-    @main_app = BankAccount.new
+    @account = BankAccount.new
   end
 
   def test_deposit_valid_amount
-    account = BankAccount.new
-  
   input = StringIO.new("100\n")
   $stdin = input
 
-  account.deposit
+  @account.deposit
+  assert_equal 100, @account.balance, 'test_deposit_invalid_amount failed'
 
-  if account.balance == 100
-    puts "test_deposit_valid_amount passed"
-  else
-    puts "test_deposit_valid_amount failed"
-  end
-ensure
+  ensure
   $stdin = STDIN
   end
 
   def test_deposit_invalid_amount
-    account = BankAccount.new 
-  
     input = StringIO.new("2000\n100\n")
     $stdin = input
 
-    account.deposit
+    @account.deposit
+    assert_equal 100, @account.balance, 'test_deposit_invalid_amount failed'
   
-    if account.balance == 100
-      puts "test_deposit_invalid_amount passed"
-    else
-      puts "test_deposit_invalid_amount failed"
-    end
   ensure
     $stdin = STDIN
   end
-  
 end

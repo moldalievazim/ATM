@@ -1,6 +1,6 @@
 # ATM app CLI
 
-Ruby CLI (command line interface) project simulating a ATM with some functionalities (balance check, deposit, withdrawal).
+Ruby CLI (command line interface) project simulating an ATM with some functionalities (balance check, deposit, withdrawal).
 
 ## Operation
 
